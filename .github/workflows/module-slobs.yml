@@ -22,18 +22,15 @@ jobs:
 
       - name: Install
         run: |
-          cd module-slobs
           yarn cache clean
           yarn install --network-timeout 1000000
 
       - name: Build
-        run: |
-          cd module-slobs
-          yarn build
+        run: yarn build
 
       - name: Compress
         run: |
-          cd module-slobs/dist
+          cd ./dist
           npx bestzip ../module-slobs.zip ./*
 
       - name: Upload
@@ -43,5 +40,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           host: ${{ secrets.FTP_HOST }}
           port: ${{ secrets.FTP_PORT }}
-          src: ./module-slobs/module-slobs.zip
+          src: ./module-slobs.zip
           dest: ./builds/${{ github.sha }}/modules/module-slobs.zip
