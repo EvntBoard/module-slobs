@@ -1,0 +1,31 @@
+{
+  "name": "evntboard-plugin-slobs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "watch": "ncc build src/index.ts -w -o dist",
+    "build": "ncc build src/index.ts -m -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvntBoard/plugin-obs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvntBoard/plugin-slobs/issues"
+  },
+  "homepage": "https://github.com/EvntBoard/plugin-slobs#readme",
+  "dependencies": {
+    "evntboard-communicate": "https://github.com/EvntBoard/communicate.git",
+    "sockjs-client": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "@types/sockjs-client": "^1.5.1",
+    "@vercel/ncc": "^0.28.6",
+    "typescript": "^4.1.3"
+  }
+}
