@@ -4,3 +4,4 @@ dist
 package
 .env
 build
+config.json
